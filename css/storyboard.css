@@ -15,22 +15,26 @@ body{
     background : #F0F0F5;
 }
 
-.board h2, p{
-    font-size : 100%;
-    font-weight : normal;
-}
+
 .board ul, li{
     list-style : none;
 }
 
 .board ul{
+    text-align: left;
     overflow : hidden;
     padding : 3em;
 }
 
 
 .board ul li.placeholder{
-  
+   font-family: 'Chewy', arial, sans-serif;
+   font-weight: normal;
+   font-size: 10px;
+   color: #ccc;
+   padding : 6px;
+   margin-left: 0px;
+   text-align: left;
 }
 
 .board ul li.card {
@@ -72,7 +76,7 @@ body{
     font-family : "Reenie Beanie", arial, sans-serif;
 }
 
-.board ul li:nth-child(even) a{
+.board ul li:nth-child(even) {
     -moz-transform : rotate(4deg);
     -webkit-transform : rotate(4deg);
     -o-transform : rotate(4deg);
@@ -80,7 +84,7 @@ body{
     top : 5px;
 }
 
-.board ul li:nth-child(3n) a{
+.board ul li:nth-child(3n) {
     -moz-transform : rotate(-3deg);
     -webkit-transform : rotate(-3deg);
     -o-transform : rotate(-3deg);
@@ -88,7 +92,7 @@ body{
     top : -5px;
 }
 
-.board ul li:nth-child(-5) a{
+.board ul li:nth-child(-5) {
     -moz-transform : rotate(5deg);
     -webkit-transform : rotate(5deg);
     -o-transform : rotate(5deg);
@@ -96,7 +100,11 @@ body{
     top : -10px;
 }
 
-.board ul li{
+.board ul li.placeholder{
+    margin : 1em;
+    float: center;
+}
+.board ul li.card{
     margin : 1em;
     float : right;
 }
