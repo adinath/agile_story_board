@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/typography.css"
+    <link rel="stylesheet" type="text/css" href="css/print.css">
+
+    <link rel="stylesheet" type="text/css" href="css/storyboard.css">
+    <link rel="stylesheet" type="text/css"
+          href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular">
+    <title> Agile Story Board </title>
+  </head>
+
+  <body>
+    <div class="container board" id="board">
+	    <div class="span-7 colborder" id="readyfordev">
+	      <h2> READY FOR DEV </h2>
+	      <ul class="boxwithborder">
+	      	<li class="placeholder">Add your items here</li>
+			
+			<li>
+			  <a href="#">
+			    <h2> #001 </h2>
+			    <p> DESIGN A SCREEN FOR DETAILS OF A LOO AFTER SELECTION  </p>
+			  </a>
+			</li>
+			<li>
+			  <a href="#">
+			    <h2> #006 SETTING UP </h2>
+			    <p> THE PROJECT SKELETON</p>
+			  </a>
+			</li>
+			
+		  </ul>
+		</div>
+	    <div class="span-7 colborder" id="indev">
+	      <h2> IN  DEV </h2>
+	      <ul class="boxwithborder">
+			<li class="placeholder">Add your items here</li>
+			
+	      </ul>
+	    </div>
+	    <div class="span-7 last colborder" id="qa">
+	      <h2> IN QA </h2>
+	      <ul class="boxwithborder">
+			<li class="placeholder">Add your items here</li>
+		   </ul>
+	    </div>
+  </div>
+ </body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+ <script type="text/javascript" src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"> </script>
+ <script type="text/javascript">
+ 	$(function(){
+	$("#board li").draggable({
+		revert: "invalid"
+	});
+	$("#board ul").droppable({
+		accept: ".board li",
+      	drop: function( event, ui ) {
+        	
+        	$(ui.draggable).css("top","");
+        	$(ui.draggable).css("left","");
+        	$( ui.draggable ).appendTo( this );
+      	}
+    });
+    
+  });
+ </script>
+</html>
