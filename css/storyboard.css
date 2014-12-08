@@ -28,18 +28,12 @@ body{
     padding : 3em;
 }
 
-.board ul li h2{
-    font-size : 90%;
-    font-weight : bold;
-    padding-bottom : 7px;
+
+.board ul li.placeholder{
+  
 }
 
-.board ul li p{
-    font-family : "Reenie Beanie", arial, sans-serif;
-    font-size : 100%;
-}
-
-.board ul li a{
+.board ul li.card {
     text-decoration : none;
     color : #000;
     display : block;
@@ -57,6 +51,25 @@ body{
     -moz-transition : -moz-transform .15s linear;
     -o-transition : -o-transform .15s linear;
     -webkit-transition : -webkit-transform .15s linear;
+}
+
+.board ul li textarea {
+    font-size : 100%;
+    background: rgba(0, 0, 0, 0); /* transparent background */
+    resize: none;
+    padding: 3px;
+    border-style: none;
+}
+
+.board ul li textarea.title {
+    font-family: 'Chewy', arial, sans-serif;
+    font-weight: bold;
+    height:20%;
+}
+
+.board ul li textarea.details {
+    height:80%;
+    font-family : "Reenie Beanie", arial, sans-serif;
 }
 
 .board ul li:nth-child(even) a{
@@ -88,7 +101,7 @@ body{
     float : right;
 }
 
-.board ul li a:hover,ul li a:focus{
+.board ul li.card:hover,ul li.card:focus{
   -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
   -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
   box-shadow:10px 10px 7px rgba(0,0,0,.7);

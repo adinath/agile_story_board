@@ -21,17 +21,13 @@
 	      <ul class="boxwithborder">
 	      	<li class="placeholder">Add your items here</li>
 			
-			<li>
-			  <a href="#">
-			    <h2> #001 </h2>
-			    <p> DESIGN A SCREEN FOR DETAILS OF A LOO AFTER SELECTION  </p>
-			  </a>
+			<li class="card">
+				<textarea class="title"> #001 </textarea>
+			    <textarea class="details"> DESIGN A SCREEN FOR DETAILS OF A LOO AFTER SELECTION  </textarea>
 			</li>
-			<li>
-			  <a href="#">
-			    <h2> #006 SETTING UP </h2>
-			    <p> THE PROJECT SKELETON</p>
-			  </a>
+			<li class="card">
+				<textarea class="title"> #001 </textarea>
+			    <textarea class="details"> DESIGN A SCREEN FOR DETAILS OF A LOO AFTER SELECTION  </textarea>
 			</li>
 			
 		  </ul>
@@ -55,7 +51,7 @@
  <script type="text/javascript" src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"> </script>
  <script type="text/javascript">
  	$(function(){
-	$("#board li").draggable({
+	$("#board li.card").draggable({
 		revert: "invalid"
 	});
 	$("#board ul").droppable({
